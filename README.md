@@ -1,1 +1,3 @@
-code for the program is in recursive-algorithms.py in this repo
+# recursive-functions
+
+code for the program is in recursive-functions.py in this repo
