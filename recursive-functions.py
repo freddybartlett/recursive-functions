@@ -1,3 +1,17 @@
+#iterative approach for counting
+def countingi(targetNum):
+    for count in range(1,targetNum+1):
+        print(count)
+
+#recursive approach for counting
+def countingr(targetNum):
+    count = targetNum
+    if count == 0:
+        return
+    countingr(count-1)
+    print(count)
+
+
 #iterative approach to finding a factorial of a given number
 def factoriali(n):
     result = 1
@@ -62,12 +76,14 @@ def reversestringr(inputString):
 
 #recursive approach to a binary search algorithm
 def binarysearchr(inputList,targetChar):
+    if len(inputList) == 0:
+        return False
     mid = len(inputList) // 2
     if inputList[mid] == targetChar:
         return True
     else:
         left = inputList[:mid]
-        right = inputList[mid:]
+        right = inputList[mid+1:]
         if targetChar > inputList[mid]:
             return binarysearchr(right,targetChar)
         else:
